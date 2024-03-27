@@ -18,10 +18,9 @@ pip install -U git+https://github.com/ReubenDo/TumorSegmentator#egg=TumorSegment
 ### Usage
 ```
 TumorSegmentator -t1 t1.nii.gz -cet1 cet1.nii.gz -o segmentations
+TumorSegmentator -t1 t1.nii.gz -cet1 cet1.nii.gz -t2 t2.nii.gz -flair flair.nii.gz -o segmentations
 ```
 > Note: A Nifti file or a folder with all DICOM slices of one patient is allowed as input
-
-> Note: If you run on CPU use the option `--fast` to greatly improve runtime.
 
 > Note: This is not a medical device and is not intended for clinical usage.
 
