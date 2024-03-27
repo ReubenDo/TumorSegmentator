@@ -3,8 +3,6 @@
 import os
 import sys
 import time
-import shutil
-import subprocess
 from pathlib import Path
 from os.path import join
 from typing import Union, List

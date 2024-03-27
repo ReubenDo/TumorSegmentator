@@ -2,12 +2,11 @@
 
 
 import time
-from pathlib import Path
 import numpy as np
 import nibabel as nib
 from tqdm import tqdm
 
-from scipy.ndimage import binary_dilation, binary_erosion, binary_closing
+from scipy.ndimage import binary_dilation, binary_erosion
 from scipy import ndimage
 
 from tumorsegmentator.map_to_binary import class_map
