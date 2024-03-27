@@ -232,8 +232,9 @@ def save_segmentation_nifti(class_map_item, tmp_dir=None, output_path=None, nora
     img = nib.load(tmp_dir / "s01.nii.gz")
     img_data = img.get_fdata()
     binary_img = img_data >= k
+    binary_img = k * binary_img.astype(np.uint8)
     # output_path = str(file_out / f"{v}.nii.gz")
-    nib.save(nib.Nifti1Image(binary_img.astype(np.uint8), img.affine, header), output_path.format(v))
+    nib.save(nib.Nifti1Image(binary_img, img.affine, header), output_path.format(v))
 
 
 def nnUNet_predict_image(inputs: List[Union[str, Path, Nifti1Image, None]], 
